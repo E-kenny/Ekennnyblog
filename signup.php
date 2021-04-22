@@ -81,74 +81,96 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $user->password= $_POST['password'];
         $user->isAdmin= $_POST['isAdmin'];
         $user->signUp();
-      
-
-
-        
-     }
+    }
     
-     
-
-    //Close connection
+     //Close connection
     unset($db);
 }
 ?>
  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Signup</title>
+</head>
+<body>
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" >
- 
-    <table class='table'>
-
-    <tr>
-            <td>Name</td>
-            <td><input type='text' name='name'/></td>
-            <span ><?php echo $name_err; ?></span>
-        </tr>
- 
-        <tr>
-            <td>Email</td>
-            <td><input type='email' name='email'/></td>
-        </tr>
-
-        <tr>
-            <td>Password</td>
-            <td><input type='password' name='password'/></td>
-            <span><?php echo $password_err; ?></span>
-        </tr>
-
-        <tr>
-            <td>Confirm Password</td>
-            <td><input type='password' name='confirm_password'/></td>
-            <span><?php echo $confirm_password_err; ?></span>
-        </tr>
-
-        <tr>
-            <td>Admin</td>
-                <td>
-                        <select name='isAdmin'>
-                            <option >Are you an Admin</option>
-                            <option value='1'>Yes</option>
-                            <option value='0'>No</option>
-                           
-                        </select>
-                    
-                </td>
-        </tr>
-
+    <div class='form-group'>
+        <label class="control-label col-sm-2">Name</label>
+        <div class="col-sm-10">
+            <input type='text' name='name' class='form-control'/>
+        </div>
+        <span ><?php echo $name_err; ?></span>
+    </div>
        
+    
+    <div class='form-group ' >
+        <label class="control-label col-sm-2">Email</label>
+        <div class="col-sm-10">
+            <input type='email' name='email' class='form-control'/>
+        </div>
+    </div>
 
-        <tr>
-            <td></td>
-            <td>
-                <button type="submit">Create</button>
-            </td>
-        </tr>
- 
-    </table>
+    <div class='form-group '>
+        <label class="control-label col-sm-2">Admin</label>
+        <div class="col-sm-10">
+            <select name='isAdmin' class='form-control'>
+                <option >Are you an Admin</option>
+                <option value='1'>Yes</option>
+                <option value='0'>No</option>
+            </select>
+        </div>
+
+    <div class='form-group '>
+        <label class="control-label col-sm-2">Password</label>
+        <div class="col-sm-10">
+            <input type='password' name='password' class='form-control'/>
+        </div>
+        <span><?php echo $password_err; ?></span>
+    </div>
+
+    
+        
+    </div>
+    
+    <div class='form-group '>
+        <label class="control-label col-sm-2">Confirm Password</label>
+        <div class="col-sm-10">
+            <input type='password' name='confirm_password' class='form-control'/>
+        </div>
+        <span><?php echo $confirm_password_err; ?></span>
+    </div>
+    
+
+   
+    
+
+    <div class="form-group">
+        
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Create</button>
+        </div>
+    </div>
+
 </form>
-<h3 class="su-li">Already have an account? <a href='login.php' > Login </a></h3>
-<h3 class="su-li">Forget password? <a href='forget_password.html' > Forget Password </a></h3>
+<h3 >Already have an account? <a href='login.php' > Login </a></h3>
+<h3 >Forget password? <a href='forget_password.html' > Forget Password </a></h3>
 
 <?php
 include_once 'layout_footer.php';
+echo "</body>
+</html>";
+
 ?>

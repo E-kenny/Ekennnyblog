@@ -73,41 +73,80 @@ $blog->image = $image;
 
   
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Login</title>
+</head>
+ <body>
 <!-- 'update blog' form will be here -->
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?id={$id}");?>" method="post" enctype="multipart/form-data">
  
-    <table class='table'>
-        <tr>
-        <td>Name</td>
-            <td><input type='text' name='name' /></td>
-        </tr>
- 
-        <tr>
-        <td>Title</td>
-            <td><input type='text' name='title'/></td>
-        </tr>
+    <div class="form-group">
+        <label class="control-label col-sm-2">Name</label>
+        <div class="col-sm-10">
+            <input type='text' name='name' class="form-control"/>
+        </div>
+    </div>
 
-        <tr>
-            <td>Description</td>
-            <td><textarea name="description" id="" cols="30" rows="10"></textarea></td>
-        </tr>
-        
+    <div class="form-group">
+    <label class="control-label col-sm-2">Title</label>
+        <div class="col-sm-10">
+            <input type='text' name='Tittle' class="form-control"/>
+        </div>
+    </div>
 
-        <tr>
-        <td>Image</td>
-            <td><input type='file' name='image'/></td>
-        </tr>
- 
+    <div class="form-group">
+        <label class="control-label col-sm-2">Description</label>
+        <div class="col-sm-10">
+            <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label  class="control-label col-sm-2">Category</label>
+            <div class="col-sm-10">
+                    <select name='title' class="form-control">
+                        <option >select title in decimal</option>
+                        <option value='1.0'>1.0</option>
+                        <option value='2.0'>2.0</option>
+                        
+                    </select>
+                
+            </div>
+    </div>
+    
+    <div class="form-group">
+    <label class="control-label col-sm-2">Image</label>
+        <div class="col-sm-10">
+            <input type='file' name='image' class="form-control"/>
+        </div>
+    </div>
+
+    
+
+
+    <div class="form-group">
         
-        <tr>
-            <td></td>
-            <td>
-                <button type="submit">Update</button>
-            </td>
-        </tr>
- 
-    </table>
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Update</button>
+        </div>
+    </div>
+
+    </form>
+ </body>
 </form>
 <?php
 include_once 'layout_footer.php';?>

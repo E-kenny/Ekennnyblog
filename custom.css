@@ -97,7 +97,7 @@ h5{
       }
   
 
-  div a {
+  /* div a {
     width: auto;
     margin:10px;
   }
@@ -110,7 +110,7 @@ h5{
       text-decoration: none;
       border: 2px solid #ddd;
 
-    }
+    } */
   
 
   .nav{
@@ -183,10 +183,10 @@ h5{
     color: white;
     margin: 15px auto;
   }
-  .su-li{
+  /* .su-li{
     font-size: 13px;
     margin: 20px;
-  }
+  } */
 
 
 } 

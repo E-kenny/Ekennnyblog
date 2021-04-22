@@ -57,36 +57,54 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     unset($db);
 }
 ?>
- 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" >
- 
-    <table class='table'>
- 
-        <tr>
-            <td>Email</td>
-            <td><input type='email' name='email'/></td>
-            <span><?php echo $email_err; ?></span>
 
-        </tr>
+    <div class='form-group ' >
+        <label class="control-label col-sm-2">Email</label>
+        <div class="col-sm-10">
+            <input type='email' name='email' class='form-control'/>
+        </div>
+    </div>
 
-        <tr>
-            <td>Password</td>
-            <td><input type='password' name='password'/></td>
-            <span ><?php echo $password_err; ?></span>
-        </tr>
- 
-        <tr>
-            <td></td>
-            <td>
-                <button type="submit">login</button>
-            </td>
-        </tr>
- 
-    </table>
+    <div class='form-group '>
+        <label class="control-label col-sm-2">Password</label>
+        <div class="col-sm-10">
+            <input type='password' name='password' class='form-control'/>
+        </div>
+        <span><?php echo $password_err; ?></span>
+    </div>
+
+    <div class="form-group">
+        
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Create</button>
+        </div>
+    </div>
 </form>
-<h3 class="su-li">Don't have an account? <a href='signup.php' > Signup </a></h3>
-<h3 class="su-li">Forget password? <a href='forget_password.html' > Forget Password </a></h3>
+
+<h3 >Don't have an account? <a href='signup.php' > Signup </a></h3>
+<h3 >Forget password? <a href='forget_password.html' > Forget Password </a></h3>
+
+</body>
+
 
 <?php
 include_once 'layout_footer.php';
