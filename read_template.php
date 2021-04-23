@@ -1,4 +1,6 @@
-<?php 
+
+<?php
+
 // search form
 echo "<form role='search' action='search.php'>";
     echo "<div>";
@@ -12,13 +14,19 @@ echo "</form>";
 
 
 echo "<div class='nav'>
-    <a href='create_blog.php' >Create-Blog</a>
-    <a href='logout.php?' >  Logout </a>
-    </div>";
+        <div class='col-sm-offset-8 col-sm-4'>
+            <a href='create_blog.php' class='btn btn-default'>Create-Blog</a>
+        </div>
+        
+        <div class='col-sm-offset-8 col-sm-8'>
+            <a href='logout.php' class='btn btn-default'>Logout</a>
+        </div>
+        
+        </div>";
  echo "<hr/>";
 //show data from database
 // display the products if there are any
-echo "<div class= grid-layout>";
+echo "<div class='grid-layout'>";
                 if($total_rows>0){
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             

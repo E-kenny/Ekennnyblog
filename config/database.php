@@ -1,7 +1,7 @@
 <?php
 class Database{
   
-    // specify your own database credentials
+    //specify your own database credentials
     private $host = "remotemysql.com";
     private $db_name = "ce5FGjzO2j";
     private $username = "ce5FGjzO2j";

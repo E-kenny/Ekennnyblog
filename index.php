@@ -31,6 +31,9 @@ $total_rows = $blog->countAll();
 
 //page header
 $page_title = "Blogs";
+?>
+
+<?php
 include_once 'layout_header.php';
  
 
