@@ -95,7 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="form-group">
         
         <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Create</button>
+            <button type="submit" class="btn btn-default">Login</button>
         </div>
     </div>
 </form>

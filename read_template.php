@@ -2,31 +2,48 @@
 <?php
 
 // search form
+
 echo "<form role='search' action='search.php'>";
-    echo "<div>";
+    
         $search_value=isset($search_term) ? "value='{$search_term}'" : "";
-        echo "<input type='text' class='form-control' placeholder='Type blog name or description...' name='s' id='srch-term' required {$search_value} />";
-        echo "<div class='input-group-btn'>";
-            echo "<button type='submit'>Search</button>";
+       echo "<div class='form-group'>";
+            echo "<div class='col-sm-10'>";
+                echo "<input type='text' class='form-control' placeholder='Type blog name or description...' name='s' id='srch-term' required {$search_value} />";
+            echo "</div>";
+       echo "</div>";
+       
+       echo "<div class='form-group'>";
+            echo "<div class='col-sm-10'>";
+                echo "<button type='submit' class='btn btn-default'>Search</button>";
+            echo "</div>";
         echo "</div>";
-    echo "</div>";
+   
 echo "</form>";
 
+        
 
-echo "<div class='nav'>
-        <div class='col-sm-offset-8 col-sm-4'>
-            <a href='create_blog.php' class='btn btn-default'>Create-Blog</a>
-        </div>
+echo " <div class='container'>";
+       echo    "<div class='row'>
+                    <div class='col-md-offset-2'>
+                        <a href='create_blog.php' >
+                        <button class='btn btn-default'> Create-Blog </button>
+                        </a>
+                    </div>
+
+                    <div class='col-md-offset-10'>
+                        <a href='logout.php' >
+                            <button class='btn btn-default'> Logout </button>
+                        </a>
+                    </div>
+   </div>";
         
-        <div class='col-sm-offset-8 col-sm-8'>
-            <a href='logout.php' class='btn btn-default'>Logout</a>
-        </div>
-        
-        </div>";
+
+
  echo "<hr/>";
+ 
 //show data from database
 // display the products if there are any
-echo "<div class='grid-layout'>";
+echo "<div class='row'>";
                 if($total_rows>0){
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             
@@ -41,14 +58,14 @@ echo "<div class='grid-layout'>";
                                                 echo "<div>
                                                    
                                                     <a href='delete_blog.php?id={$id}' >
-                                                    Delete
+                                                    <button>Delete</button>
                                                     </a>
                                                     </div>
                                 
                                         
                                                 <div>
                                                     <a href='read_one.php?id={$id}'>
-                                                    Read
+                                                    <button>Read</button>
                                                     </a>
                                                 </div>";
                                             echo "</div >";
@@ -60,6 +77,7 @@ echo "<div class='grid-layout'>";
                     }
         
         echo "</div>";
+echo "</div>";
   
     // paging buttons 
     include_once 'paging.php';

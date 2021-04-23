@@ -38,12 +38,12 @@ include_once "layout_header.php";
  
 // read blog button
 
-
 echo "<div class='nav'>";
 echo "<a href='index.php' class='read-anchor'>";
-    echo "All Blogs";
+    echo '<button type="submit" class="btn btn-default">All Blogs</button>';
 echo "</a>";
 echo "</div>";
+echo "<br>";
 echo "<hr/>";
 echo "<br>";
 echo "<h2>{$blog->Tittle}   </h2>";

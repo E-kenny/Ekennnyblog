@@ -32,7 +32,7 @@ include_once "layout_header.php";
  
 // contents will be here
 echo "<div class='nav'>
-        <a href='index.php' class='btn'>All Blogs</a>
+        <a href='index.php' class='btn'><button>All Blogs</button></a>
 
     </div>";
  
