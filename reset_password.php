@@ -1,5 +1,5 @@
 <?php
-$page_title= "Sign Up";
+$page_title= "Reset";
 // Include config file
 include_once "config/database.php";
 

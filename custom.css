@@ -65,7 +65,7 @@ h5{
         align-items: center;
         width: 100%;
         height:50px;
-        background-color:rgb(189, 189, 218);
+        background-color:rgb(19, 19, 34);
         border: 2px solid #ddd;
 
       }   
@@ -122,7 +122,22 @@ h5{
     grid-template-rows: auto;
     grid-row-gap:30px;
   } 
-    
+
+  .flex{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 95%;
+    background-color:white;
+    margin:auto;
+    color: black;
+    margin-top: 30px;
+    border: 2px solid #ddd;
+
+   
+  } 
 } 
 
   
