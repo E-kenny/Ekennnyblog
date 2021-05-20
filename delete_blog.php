@@ -6,7 +6,7 @@
  include_once 'layout_header.php';
 
  echo "<div class='nav'>
-           <a href='index.php' class='btn'>Blogs</a>
+           <a href='index.php' class='btn'><button>Blogs</button></a>
       </div>";
 
 
@@ -31,12 +31,12 @@ if(isset($_GET['id'])){
      
     // delete the product
     if($blog->delete()){
-        echo "<h1>Blog was deleted!</h1>";
+        echo "<h3>Blog was deleted!</h3>";
     }
      
     // if unable to delete the product
     else{
-        echo "<h1>Unable to delete object!</h1>";
+        echo "<h3>Unable to delete object!</h3>";
     }
 }
 

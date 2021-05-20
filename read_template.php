@@ -2,43 +2,39 @@
 <?php
 
 // search form
-
 echo "<form role='search' action='search.php'>";
     
         $search_value=isset($search_term) ? "value='{$search_term}'" : "";
        echo "<div class='form-group'>";
-            echo "<div class='col-sm-10'>";
-                echo "<input type='text' class='form-control' placeholder='Type blog name or description...' name='s' id='srch-term' required {$search_value} />";
+            echo "<div class='col-sm-3'>";
+                echo "<input type='text' class='form-control' placeholder='Type blog name or description...' name='s' id='srch-term'  {$search_value} />";
             echo "</div>";
        echo "</div>";
-       
+
+
        echo "<div class='form-group'>";
-            echo "<div class='col-sm-10'>";
+            echo "<div class='col-sm-2'>";
                 echo "<button type='submit' class='btn btn-default'>Search</button>";
             echo "</div>";
-        echo "</div>";
-   
+        echo "</div>";     
+
 echo "</form>";
-
-        
-
-echo " <div class='container'>";
-       echo    "<div class='row'>
-                    <div class='col-md-offset-2'>
-                        <a href='create_blog.php' >
-                        <button class='btn btn-default'> Create-Blog </button>
-                        </a>
-                    </div>
-
-                    <div class='col-md-offset-10'>
-                        <a href='logout.php' >
-                            <button class='btn btn-default'> Logout </button>
-                        </a>
-                    </div>
-   </div>";
-        
-
-
+     
+echo    "<div class='row'>
+                                    <div class='col-sm-2 style='margin:10px'>
+                                        <a href='create_blog.php' >
+                                        <button> Create </button>
+                                        </a>
+                                        
+                                    </div>
+                                  
+                                    <div class='col-sm-1' style='margin:3px'>
+                                        <a href='logout.php' >
+                                            <button> Logout </button>
+                                        </a>
+                                    </div>
+                            </div>";
+                
  echo "<hr/>";
  
 //show data from database
@@ -85,6 +81,7 @@ echo "</div>";
 }
 // tell the user there are no blog
 else{
-    echo "<h1>No Blog found.</h1>";
+    echo "<h3>No Blog found.</h3>";
 }
+
 ?>

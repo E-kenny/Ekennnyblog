@@ -83,6 +83,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <input type='email' name='email' class='form-control'/>
         </div>
     </div>
+    <br>
+    <br>
 
     <div class='form-group '>
         <label class="control-label col-sm-2">Password</label>
@@ -91,6 +93,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
         <span><?php echo $password_err; ?></span>
     </div>
+    <br>
+    <br>
 
     <div class="form-group">
         
